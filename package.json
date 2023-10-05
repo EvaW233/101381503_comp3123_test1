@@ -1,0 +1,13 @@
+{
+  "name": "101381503_comp3123_test1",
+  "version": "1.0.0",
+  "description": "Lab test project for COMP3123",
+  "main": "es6Features.js",
+  "scripts": {
+    "start": "node es6Features.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC"
+}
