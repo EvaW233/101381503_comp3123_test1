@@ -17,7 +17,7 @@ async function directoryExists(dirPath) {
 async function main() {
   const logsDirectory = 'Logs';
 
-  // Check if Logs directory exists, and create it if not
+  
   if (!(await directoryExists(logsDirectory))) {
     try {
       await fs.mkdir(logsDirectory);
@@ -27,24 +27,20 @@ async function main() {
     }
   }
 
-  // Change the current working directory to the new Logs directory
   process.chdir(logsDirectory);
 
-  // Create 10 log files and write some text into each file
   for (let i = 0; i < 10; i++) {
     const fileName = `log${i}.txt`;
     await fs.writeFile(fileName, `This is log file ${i}`);
     console.log(fileName);
   }
 
-  // List the files and delete them
   const files = await fs.readdir('.');
   for (const file of files) {
     console.log(`delete files...${file}`);
     await fs.unlink(file);
   }
 
-  // Go back to the parent directory and remove the Logs directory
   process.chdir('..');
   await fs.rmdir(logsDirectory);
 

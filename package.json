@@ -7,7 +7,7 @@
     "start": "node es6Features.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Your Name",
+  "keywords": ["labtest1"],
+  "author": "Yiting Wang",
   "license": "ISC"
 }
